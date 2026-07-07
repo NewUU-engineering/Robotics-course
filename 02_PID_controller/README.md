@@ -1,3 +1,3 @@
 # PID controller
-The PID controller is widly used algorithm to solve the basic problem of stability of the system. The most popular tuning methods are [Ziegler-Nichols and Coehen-Coon] (https://eng.libretexts.org/Bookshelves/Industrial_and_Systems_Engineering/Chemical_Process_Dynamics_and_Controls_(Woolf)/09%3A_Proportional-Integral-Derivative_(PID)_Control/9.03%3A_PID_Tuning_via_Classical_Methods) \
-Live demo for the PID coefficients impact is [here] (https://thomasfermi.github.io/Algorithms-for-Automated-Driving/Control/PID.html).
+The PID controller is widly used algorithm to solve the basic problem of stability of the system. The most popular tuning methods are [Ziegler-Nichols and Coehen-Coon](https://eng.libretexts.org/Bookshelves/Industrial_and_Systems_Engineering/Chemical_Process_Dynamics_and_Controls_(Woolf)/09%3A_Proportional-Integral-Derivative_(PID)_Control/9.03%3A_PID_Tuning_via_Classical_Methods) \
+Live demo for the PID coefficients impact is [here](https://thomasfermi.github.io/Algorithms-for-Automated-Driving/Control/PID.html).
