@@ -1,4 +1,4 @@
-# Motor Parameters Estimation
+# Motor Parameters Identification
 
 Tools for collecting and analyzing angular velocity data for TRIK robot RK370 motors depending on the supplied voltage (PWM).
 
