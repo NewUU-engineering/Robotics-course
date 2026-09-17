@@ -33,8 +33,6 @@ The textbook formula is continuous. Your robot runs a loop. That difference is w
 - **Saturation.** Your output is motor power, and it is bounded. Clip it — and take the clipping into account before you update the integral.
 - **No libraries.** Expression block with Python style code. A PID needs nothing more than four floats of state.
 
-```
-
 ### Tuning methods
 
 Guessing works, but slowly. The two classical recipes give you a starting point from a single experiment:
