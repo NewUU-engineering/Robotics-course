@@ -56,7 +56,7 @@ x,y,time
 ...
 ```
 
-- `x`, `y` — odometry position in **cm**
+- `x`, `y` — odometry position in **m**
 - `time` — in **ms** since program start
 
 Name the files `odometry_data_sim.txt` (simulator) and `odometry_data_real.txt` (real robot). Run the **same program** in both cases.
@@ -79,7 +79,7 @@ plt.plot(x_s, y_s, '--', label='model (simulator)')
 plt.plot(x_r, y_r,       label='real robot (odometry)')
 plt.plot(0, 0, 'ko', label='start')
 plt.axis('equal'); plt.grid(True); plt.legend()
-plt.xlabel('x, cm'); plt.ylabel('y, cm')
+plt.xlabel('x, m'); plt.ylabel('y, m')
 plt.title('Model vs real trajectory')
 plt.show()
 
@@ -90,12 +90,12 @@ ys_i = np.interp(t_r, t_s, y_s)
 err = np.hypot(x_r - xs_i, y_r - ys_i)
 
 plt.plot(t_r / 1000, err)
-plt.xlabel('time, s'); plt.ylabel('position error, cm'); plt.grid(True)
+plt.xlabel('time, s'); plt.ylabel('position error, m'); plt.grid(True)
 plt.title('Model vs real position error')
 plt.show()
 
-print(f'Final odometry error (sim vs real): {err[-1]:.1f} cm')
-print(f'Max error: {err.max():.1f} cm')
+print(f'Final odometry error (sim vs real): {err[-1]:.1f} m')
+print(f'Max error: {err.max():.1f} m')
 ```
 
 > If `loadtxt` fails, open the file and check for a header line, trailing commas, or `;` instead of `,`.
