@@ -162,7 +162,7 @@ Your parameters are reused in Week 6 (localization) and Week 7 (go-to-goal), and
 
 ### Deliverables
 
-Create a repo `CS413 - Robotics/Lab5/<content>`:
+Create a repo `CS413-Robotics/Lab5/<content>`:
 
 1. **`motor_identification.qrs`** — the TRIK Studio Python program used to collect the data.
 2. **`motor_data/`** — the raw files exactly as the robot wrote them (`wheel_<N>_v_<PWM>.txt`, one per level and wheel). Do not edit them.
