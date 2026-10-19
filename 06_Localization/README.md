@@ -101,7 +101,7 @@ print(f'Max error: {err.max():.1f} m')
 
 ### Deliverables
 
-Create a repo `CS413 - Robotics/Lab6/<content>`:
+Create a repo `CS413-Robotics/Lab6/<content>`:
 
 1. **`trajectory_sim.qrs`** and **`trajectory_real.qrs`** — the programs used, with odometry logging.
 2. **`odometry_data_sim.txt`** and **`odometry_data_real.txt`** — the raw logs.
