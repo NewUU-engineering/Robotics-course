@@ -106,6 +106,6 @@ Create a repo `CS413-Robotics/Lab6/<content>`:
 1. **`trajectory_sim.qrs`** and **`trajectory_real.qrs`** — the programs used, with odometry logging.
 2. **`odometry_data_sim.txt`** and **`odometry_data_real.txt`** — the raw logs.
 3. **Colab notebook (`.ipynb`)** with both plots and the printed errors.
-4. **Measured end point** — after the real run, measure the robot's actual final position with a tape and compare it to the last line of `odometry_data_real.txt`.
+4. **Measured end point** — after the real run, measure the robot's actual final position with a tape and compare it to the last line of `odometry_data_real.txt`. In the case of the ERROR visualization use the ideal trajectory lines as reference value separately for the simulation and the experiment data. 
 5. **3–6 sentences**: where does the real trajectory diverge from the model, which error source from the lecture explains it, and does the robot *know* it is wrong?# Localization
 Nice presentation of the differential drive robot localization from ETH and Duckietown Project https://ethz.ch/content/dam/ethz/special-interest/mavt/dynamic-systems-n-control/idsc-dam/Lectures/amod/AMOD_2020/20201019-02%20-%20ETHZ%20-%20Modeling.pdf
