@@ -1,5 +1,3 @@
-MAX_NOTEBOOK_RAW_BYTES = 30_000_000
-
 #!/usr/bin/env python3
 """Local, read-only Gemini reviewer prototype.
 
@@ -36,6 +34,7 @@ IGNORED_DIRECTORIES = {
 }
 API_URL = "https://generativelanguage.googleapis.com/v1beta/interactions"
 
+MAX_NOTEBOOK_RAW_BYTES = 30_000_000
 
 class ReviewerError(RuntimeError):
     """An expected, user-facing reviewer error."""
@@ -110,8 +109,8 @@ def load_source_files(root: Path, max_file_bytes: int, max_total_bytes: int) -> 
     result: list[SourceFile] = []
     total_bytes = 0
 
-    for path in paths:
-      raw = path.read_bytes()
+      for path in paths:
+        raw = path.read_bytes()
         is_notebook = path.suffix.lower() == ".ipynb"
 
         if is_notebook:
@@ -124,6 +123,7 @@ def load_source_files(root: Path, max_file_bytes: int, max_total_bytes: int) -> 
             raise ReviewerError(
                 f"Файл слишком большой: {path} "
                 f"({len(raw)} байт; лимит {max_file_bytes})."
+            )
 
         try:
             text = raw.decode("utf-8-sig")
