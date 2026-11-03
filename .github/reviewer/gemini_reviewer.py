@@ -112,18 +112,18 @@ def load_source_files(root: Path, max_file_bytes: int, max_total_bytes: int) -> 
 
     for path in paths:
       raw = path.read_bytes()
-is_notebook = path.suffix.lower() == ".ipynb"
+        is_notebook = path.suffix.lower() == ".ipynb"
 
-if is_notebook:
-    if len(raw) > MAX_NOTEBOOK_RAW_BYTES:
-        raise ReviewerError(
-            f"Notebook слишком большой: {path} "
-            f"({len(raw)} байт; лимит {MAX_NOTEBOOK_RAW_BYTES})."
-        )
-elif len(raw) > max_file_bytes:
-    raise ReviewerError(
-        f"Файл слишком большой: {path} ({len(raw)} байт; лимит {max_file_bytes})."
-    )
+        if is_notebook:
+            if len(raw) > MAX_NOTEBOOK_RAW_BYTES:
+                raise ReviewerError(
+                    f"Notebook слишком большой: {path} "
+                    f"({len(raw)} байт; лимит {MAX_NOTEBOOK_RAW_BYTES})."
+                )
+        elif len(raw) > max_file_bytes:
+            raise ReviewerError(
+                f"Файл слишком большой: {path} "
+                f"({len(raw)} байт; лимит {max_file_bytes})."
 
         try:
             text = raw.decode("utf-8-sig")
