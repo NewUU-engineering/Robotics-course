@@ -1,5 +1,3 @@
-MAX_NOTEBOOK_RAW_BYTES = 30_000_000
-
 #!/usr/bin/env python3
 """Local, read-only Gemini reviewer prototype.
 
@@ -36,6 +34,7 @@ IGNORED_DIRECTORIES = {
 }
 API_URL = "https://generativelanguage.googleapis.com/v1beta/interactions"
 
+MAX_NOTEBOOK_RAW_BYTES = 30_000_000
 
 class ReviewerError(RuntimeError):
     """An expected, user-facing reviewer error."""
