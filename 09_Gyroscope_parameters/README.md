@@ -9,7 +9,9 @@
 - A MEMS vibratory gyro measures angular **rate** ω through the Coriolis force acting on a driven proof mass. It never measures angle directly — heading is obtained by integrating ω, so every error in ω becomes a growing error in θ.
 - Sensor model used in this lab (yaw axis) — every parameter you identify plugs into it, so the result is a gyro you can **simulate**:
 
-  $$\omega_{meas}(t_k) = Q_{\Delta}\Big(\mathrm{sat}_{\pm\omega_{max}}\big[(1+s)\,\omega_{true}(t_k) + b_0 + d\,t_k + n_k\big]\Big), \quad n_k \sim \mathcal{N}(0,\sigma^2)$$
+  ```math
+  \omega_{meas}(t_k) = Q_{\Delta}\Big(\mathrm{sat}_{\pm\omega_{max}}\big[(1+s)\,\omega_{true}(t_k) + b_0 + d\,t_k + n_k\big]\Big), \quad n_k \sim \mathcal{N}(0,\sigma^2)
+  ```
 
   | Symbol | Parameter | Section |
   |---|---|---|
